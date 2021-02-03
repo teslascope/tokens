@@ -1,13 +1,13 @@
-### Tesla SSO OAuth Token Generation
+## Tesla SSO OAuth Token Generation
 This script allows for the generation of a refresh token required by third-party Tesla services.
 
-#### Setup
+### Setup
 This method requires the following to be prepared and installed.
 1. Install the latest version of ``Python 3``.
 2. Install the ``Requests`` Python 3 package (to install: ``pip3 install requests``)
 3. Download the file ``auth.tokens.py`` located in this repository.
 
-#### Generating Tokens
+### Generating Tokens
 To utilize this script, simply navigate to the directory where this file exists and then run the following command in your preferred command-line interface (CLI).
 
 If your Tesla account has MFA enabled:
@@ -22,7 +22,7 @@ python3 ./auth.tokens.py -u 'email' -p 'password'
 
 If successful, you will be given a response that contains your refresh token. You will need to copy the entirety of this large string to the third-party service/app of your choice.
 
-#### Errors / Unsuccessful Token Generation
+### Errors / Unsuccessful Token Generation
 When attempting to generate your own tokens, you may get a response back that something went wrong. While most are
 self-explanatory, we'll break down each error below.
 
@@ -50,7 +50,7 @@ that the code you provided is six-digits and numerical.
 A general error occurred when trying to authenticate via MFA. There is usually no explanation for this and very rarely happens.
 Simply try authenticating again (but don't forget to use a new passcode).
 
-#### Credits
+### Credits
 This modified script is based off [this repository](https://github.com/enode-engineering/tesla-oauth2) and has been redistributed with permission by [Enode](https://www.enode.io/).
 
 
