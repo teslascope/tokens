@@ -51,11 +51,7 @@ def remove_quotes(string):
 # For the sake of simplicity, a email, password, and passcode is always required.
 def login(email, password, passcode):
 
-    headers = {
-        "User-Agent": UA,
-        "x-tesla-user-agent": X_TESLA_USER_AGENT,
-        "X-Requested-With": "com.teslamotors.tesla",
-    }
+    headers = {}
 
     # [1] The first process of authenticating is to request the Login form on Tesla.com and receive some
     # variables to send with a subsequent request. This is essential for our login attempt to succeed.
@@ -144,7 +140,7 @@ def login(email, password, passcode):
 
     code = parse_qs(resp.headers["location"])["https://auth.tesla.com/void/callback?code"]
 
-    headers = {"user-agent": UA, "x-tesla-user-agent": X_TESLA_USER_AGENT}
+    headers = {}
     payload = {
         "grant_type": "authorization_code",
         "client_id": "ownerapi",
