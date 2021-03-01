@@ -23,6 +23,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 MAX_ATTEMPTS = 30
 CLIENT_ID = "81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384"
+USER_AGENT = "Mozilla/5.0 (Linux; Android 10; Pixel 3 Build/QQ2A.200305.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/85.0.4183.81 Mobile Safari/537.36"
 
 def gen_params():
     verifier_bytes = os.urandom(86)
@@ -42,7 +43,7 @@ def create_driver():
     options = webdriver.ChromeOptions()
     options.headless = True
     driver = webdriver.Chrome(options=options)
-    driver.execute_cdp_cmd("Network.setUserAgentOverride", {"userAgent": UA})
+    driver.execute_cdp_cmd("Network.setUserAgentOverride", {"userAgent": USER_AGENT})
     return driver
 
 def login(args):
