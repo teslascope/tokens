@@ -5,7 +5,9 @@ This script allows for the generation of a refresh token required by third-party
 This method requires the following to be prepared and installed.
 1. Install the latest version of ``Python 3``.
 2. Install the ``Requests`` Python 3 package (to install: ``pip3 install requests``)
-3. Download the file ``auth.tokens.py`` located in this repository.
+3. Install the ``Selenium`` Python 3 package (to install: ``pip3 install selenium``)
+4. Download and set up chromedriver ([download link here](https://sites.google.com/a/chromium.org/chromedriver/downloads)) that matches your version of Google Chrome and add it to the same directory as the python script (or to your system path).
+5. Download the file ``auth.tokens.py`` located in this repository.
 
 ### Generating Tokens
 To utilize this script, simply navigate to the directory where this file exists and then run the following command in your preferred command-line interface (CLI).
